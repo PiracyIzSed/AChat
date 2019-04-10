@@ -1,0 +1,83 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowActivityTransitions">true</item>
+    </style>
+    <!-- Light/Day theme -->
+    <style name="LightTheme" parent="AppTheme">
+        <!-- Customize your theme here. -->
+
+        <item name="backgroundColor">@color/colorPrimary</item>
+        <item name="backgroundColor2">@color/md_white_1000</item>
+        <item name="primaryTextColor">@color/md_black_1000</item>
+        <item name="secondaryTextColor">@color/md_grey_700</item>
+        <item name="messageBackgroundSender">@color/md_blue_700</item>
+        <item name="messageBackgroundReceiver">@color/md_grey_200</item>
+        <item name="tintColor">@color/colorAccent</item>
+        <item name="buttonColor">@color/md_blue_500</item>
+        <item name="buttonTextColor">@color/md_white_1000</item>
+        <item name="appBarColor">@color/md_blue_800</item>
+        <item name="cardColor">@color/md_grey_50</item>
+        <item name="refreshButtonColor">@color/md_grey_900</item>
+        <item name="android:windowAnimationStyle">@style/windowTransition</item>
+
+        <item name="android:textColorHint">@color/md_grey_700</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/md_grey_600</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
+
+    <!-- Dark/Night theme-->
+    <style name="DarkTheme" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="backgroundColor">@color/md_black_1000</item>
+        <item name="backgroundColor2">@color/md_black_1000</item>
+        <item name="primaryTextColor">@color/md_white_1000</item>
+        <item name="messageBackgroundSender">@color/md_blue_400</item>
+        <item name="messageBackgroundReceiver">@color/md_white_1000</item>
+        <item name="secondaryTextColor">@color/md_grey_400</item>
+        <item name="tintColor">@color/md_yellow_200</item>
+        <item name="buttonColor">@color/md_yellow_300</item>
+        <item name="buttonTextColor">@color/md_white_1000</item>
+        <item name="cardColor">@color/md_grey_900</item>
+        <item name="appBarColor">@color/md_blue_800</item>
+        <item name="refreshButtonColor">@color/md_grey_300</item>
+        <item name="android:windowAnimationStyle">@style/windowTransition</item>
+
+        <item name="android:textColorHint">#80FFFFFF</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/md_yellow_200</item>
+        <item name="colorControlNormal">@color/md_white_1000</item>
+        <item name="colorControlActivated">@color/md_yellow_200</item>
+    </style>
+
+    <style name="windowTransition" >
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="TextLabel" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">#80FFFFFF</item>
+        <item name="android:textSize">20sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/md_white_1000</item>
+        <item name="colorControlNormal">@color/md_white_1000</item>
+        <item name="colorControlActivated">@color/md_white_1000</item>
+    </style>
+
+    <style name="ActionBarTheme" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorControlNormal">@color/md_white_1000</item>
+    </style>
+
+
+</resources>

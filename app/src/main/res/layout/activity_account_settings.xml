@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundColor"
+    tools:context="com.android.achat.Activities.AccountSettingsActivity">
+
+
+    <include
+        android:id="@+id/account_settings_appbar"
+        layout="@layout/custom_app_bar" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/account_settings_appbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/verify_mail_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:backgroundTint="?attr/cardColor"
+                android:elevation="8dp"
+
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:text="Verify Account "
+                            android:textColor="?attr/primaryTextColor"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/refresh"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="8dp"
+                            android:scaleType="fitEnd"
+                            android:src="@drawable/ic_refresh_round_symbol_black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:text="e-Mail Address :-"
+                            android:textColor="?attr/primaryTextColor" />
+
+                        <TextView
+                            android:id="@+id/email_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="end|center_vertical"
+
+                            android:textColor="?attr/primaryTextColor"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/text_verify"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:padding="8dp"
+                            android:text="Your Account is not verified"
+                            android:textColor="?attr/primaryTextColor" />
+
+                        <ImageView
+                            android:id="@+id/verify_status"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="8dp"
+                            android:scaleType="fitEnd"
+                            android:src="@drawable/ic_cancel" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/resend_verification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="4dp"
+                        android:background="@null"
+                        android:hapticFeedbackEnabled="true"
+                        android:text="Resend Verification Mail"
+                        android:textColor="?attr/primaryTextColor" />
+
+                    <ProgressBar
+                        android:id="@+id/refresh_bar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvProcessing"
+                        android:layout_gravity="bottom"
+                        android:indeterminateOnly="true"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/night_mode_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/verify_mail_card"
+                android:layout_margin="8dp"
+                android:backgroundTint="?attr/cardColor"
+                android:elevation="8dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Enable Night Mode"
+                        android:textColor="?attr/primaryTextColor"
+                        android:textStyle="bold" />
+
+                    <Switch
+                        android:id="@+id/dark_switch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="Night Mode"
+                        android:textColor="?attr/primaryTextColor"
+                        android:thumbTint="?attr/tintColor"
+                        android:trackTint="?attr/tintColor" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/reset_password_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/night_mode_card"
+                android:layout_margin="8dp"
+                android:backgroundTint="?attr/cardColor"
+                android:elevation="8dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Reset Password"
+                        android:textColor="?attr/primaryTextColor"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Set A New Password "
+                        android:textColor="?attr/primaryTextColor" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:visibility="gone"
+                        android:textColorHint="?attr/primaryTextColor" >
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter Old Password"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                           />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/reset_pass"
+                        style="@style/Base.TextAppearance.AppCompat.Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/fragment_background"
+                        android:textStyle="bold"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:backgroundTint="?attr/buttonColor"
+                        android:text="Reset Password"
+                        android:textColor="?attr/buttonTextColor" />
+
+                    <ProgressBar
+                        android:id="@+id/reset_bar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvProcessing"
+                        android:layout_gravity="bottom"
+                        android:indeterminateOnly="true"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+<!--
+            <android.support.v7.widget.CardView
+                android:id="@+id/deactivate_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/reset_password_card"
+                android:layout_margin="8dp"
+                android:backgroundTint="?attr/cardColor"
+                android:elevation="8dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Deactivate Account"
+                        android:textColor="?attr/primaryTextColor"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                       >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:layout_alignParentStart="true"
+                            android:text="Deactivate Your Account"
+                            android:textColor="?attr/primaryTextColor"
+                            android:layout_alignParentLeft="true"
+                            />
+
+                        <Button
+                            android:id="@+id/deactivate_account"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/fragment_background"
+                            android:textStyle="bold"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:text="DEACTIVATE"
+                            android:backgroundTint="?attr/buttonColor"
+                            android:textColor="?attr/buttonTextColor"
+                            android:layout_alignParentRight="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp"
+                android:visibility="visible"
+                android:background="@color/md_red_300"
+                android:layout_below="@+id/reset_password_card"
+                android:id="@+id/verify_disclaimer">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:background="@color/md_red_800"
+                    />
+                <TextView
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Disclaimer:-\nYou will not be able to RESET YOUR PASSWORD or\n use NIGHT MODE unless you verify your e-Mail."
+                    android:textColor="@color/md_white_1000"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

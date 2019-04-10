@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    tools:context="com.android.achat.Fragments.ChatsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/placeholder_friend"
+        android:layout_height="match_parent"
+        android:background="@drawable/fragment_background"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            >
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:padding="16dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/very_sad_emoji_icon"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No Friends? Find New Ones Now"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_marginVertical="4dp"
+                android:textColor="?attr/secondaryTextColor"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="?attr/buttonTextColor"
+                android:background="@drawable/fragment_background"
+                android:textStyle="bold"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:backgroundTint="?attr/buttonColor"
+                android:text="Find New Friends"
+                android:layout_marginVertical="8dp"
+                android:onClick="findFriends"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/friend_list"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="4dp"
+            android:visibility="gone"
+            android:background="@drawable/fragment_background"></android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

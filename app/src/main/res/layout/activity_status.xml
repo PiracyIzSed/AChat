@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_status"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.StatusActivity"
+    android:background="?attr/backgroundColor2">
+
+    <include layout="@layout/custom_app_bar"
+        android:id="@+id/appbar_status"/>
+
+    <ProgressBar
+        android:id="@+id/status_change_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appbar_status"
+        android:layout_gravity="bottom"
+        android:indeterminateOnly="true"
+        android:visibility="gone" />
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/status_text"
+        android:layout_below="@+id/appbar_status"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:hint="Your Status"
+
+       >
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/primaryTextColor"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/save_status"
+        android:layout_below="@+id/status_text"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/fragment_background"
+        android:backgroundTint="#FF3D00"
+        android:textColor="@color/md_white_1000"
+        android:padding="8dp"
+        android:text="SAVE CHANGES"/>
+</RelativeLayout>

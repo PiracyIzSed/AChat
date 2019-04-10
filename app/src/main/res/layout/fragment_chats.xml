@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    tools:context="com.android.achat.Fragments.ChatsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fragment_background"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/placeholder_chat"
+        android:layout_centerInParent="true"
+        >
+        <ImageView
+
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/chat_placeholder"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Chats Found"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textColor="?attr/secondaryTextColor"/>
+    </LinearLayout>
+    </RelativeLayout>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="4dp"
+            android:visibility="gone"
+            android:background="@drawable/fragment_background"
+            android:id="@+id/chat_list"></android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

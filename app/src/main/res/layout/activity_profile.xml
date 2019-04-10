@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundColor"
+    tools:context="Activities.ProfileActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:layout_height="200dp"
+        android:id="@+id/profile_photo"
+        android:transitionName="imageTransition"
+        android:src="@drawable/default_avatar_profile"
+         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/profile_photo"
+        android:text="Display Name"
+        android:transitionName="nameTransition"
+        android:textStyle="bold"
+        android:textColor="@color/md_white_1000"
+        android:textSize="22sp"
+        android:id="@+id/name"
+        android:layout_marginTop="30dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/name"
+        android:text="email"
+        android:transitionName="emailTransition"
+        android:textColor="@color/md_grey_400"
+        android:textSize="18sp"
+        android:id="@+id/email"
+        android:layout_marginTop="16dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/email"
+        android:text="Status"
+        android:textColor="@color/md_white_1000"
+        android:textSize="18sp"
+        android:id="@+id/status"
+        android:layout_marginTop="16dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/send_request"
+        android:text="SEND FRIEND REQUEST"
+        android:layout_above="@+id/decline_request"
+        android:padding="8dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="#FF3D00"
+        android:background="@drawable/fragment_background"
+        android:textColor="@color/md_white_1000"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/decline_request"
+        android:enabled="false"
+        android:text="DECLINE FRIEND REQUEST"
+        android:padding="4dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="#FF3D00"
+        android:background="@drawable/fragment_background"
+        android:visibility="invisible"
+        android:textColor="@color/md_white_1000"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Total Friends"
+        android:layout_above="@+id/send_request"
+        android:textColor="@color/md_white_1000"
+        android:textSize="18sp"
+        android:id="@+id/total_friends"
+        android:layout_marginBottom="16dp"/>
+
+</RelativeLayout>
