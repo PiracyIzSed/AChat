@@ -96,7 +96,7 @@ public class RequestsFragment extends Fragment {
                         sentList.setVisibility(View.VISIBLE);
                         placeholderSent.setVisibility(View.INVISIBLE);
                     }
-                    if (type.equals("sent")) {
+                    if (type.equals("received")) {
                         receivedList.setVisibility(View.VISIBLE);
                         placeholderReceived.setVisibility(View.INVISIBLE);
                     }
